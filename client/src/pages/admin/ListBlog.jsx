@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Blogtableitem from "../../components/admin/blogtableItem";
+import BlogTableItem from "../../components/admin/BlogtableItem";
 import { useAppContext } from "../../context/AppContext";
 
 import toast from "react-hot-toast";
@@ -52,7 +52,7 @@ const ListBlog = () => {
 
           <tbody>
             {blogs.map((blog, index) => (
-              <Blogtableitem
+              <BlogTableItem
                 key={blog._id}
                 blog={blog}
                 fetchBlogs={fetchBlogs}
