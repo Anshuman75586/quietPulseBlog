@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { blog_data } from "../../assets/assets";
-import Blogtableitem from "../../components/admin/blogtableitem";
+
+import Blogtableitem from "../../components/admin/blogtableItem";
 import { useAppContext } from "../../context/AppContext";
-import { data } from "react-router-dom";
+
 import toast from "react-hot-toast";
 
 const ListBlog = () => {
