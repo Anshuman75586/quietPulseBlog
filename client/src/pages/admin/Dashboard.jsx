@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { assets } from "../../assets/assets";
-import Blogtableitem from "../../components/admin/Blogtableitem.jsx";
+
 import toast from "react-hot-toast";
 import { useAppContext } from "../../context/AppContext";
+import BlogTableItem from "../../components/admin/BlogTableItem";
 
 const Dashboard = () => {
   const [dashboard, setDashboard] = useState({
@@ -95,7 +96,7 @@ const Dashboard = () => {
             <tbody>
               {dashboard.recentblogs?.length > 0 ? (
                 dashboard.recentblogs.map((blog, index) => (
-                  <Blogtableitem
+                  <BlogTableItem
                     key={blog._id}
                     blog={blog}
                     fetchBlogs={fetchDashboard}
