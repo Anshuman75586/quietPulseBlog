@@ -1,30 +1,67 @@
-import { assets, footer_data } from "../assets/assets";
+import { footer_data } from "../assets/assets";
+import { FaLinkedin, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="px-6 md:px-16 xl:px-32 bg-primary/3">
-      <div className="flex flex-col md:flex-row items-start justify-between gap-10 py-10 border-b border-gray-500/30 text-gray-500 ">
-        {/* UPDATED LOGO SECTION */}
-        <div className="flex items-center gap-5">
-          <img className="w-32 sm:w-44" src={assets.logo} alt="logo" />
-          <p className="max-w-[410px]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ipsam
-            possimus quibusdam quas a dolorem eum mollitia recusandae voluptatem
-            similique eaque eius, aspernatur suscipit expedita! Veniam
-            laudantium repellat omnis explicabo!
+    <footer className="px-6 sm:px-8 md:px-16 xl:px-32 bg-white text-gray-400">
+      {/* Top Section */}
+      <div className="flex flex-col md:flex-row justify-between gap-10 py-10 border-b border-gray-600">
+        {/* Logo & About */}
+        <div className="flex flex-col gap-4 md:gap-6 max-w-[400px]">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary cursor-pointer">
+            QuietPulse
+          </h1>
+          <p className="text-sm sm:text-base">
+            QuietPulse is a modern blog platform for creators to share their
+            thoughts, stories, and tutorials.
           </p>
+
+          {/* Social Media */}
+          <div className="flex flex-col gap-2 mt-2">
+            <span className="font-semibold text-white text-sm">Follow Us</span>
+            <div className="flex items-center gap-4 mt-1">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-primary transition-colors"
+              >
+                <FaLinkedin size={20} />
+              </a>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-primary transition-colors"
+              >
+                <FaGithub size={20} />
+              </a>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-primary transition-colors"
+              >
+                <FaInstagram size={20} />
+              </a>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-primary transition-colors"
+              >
+                <FaTwitter size={20} />
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div className="flex flex-wrap justify-between w-full md:w-[45%] gap-5">
+        {/* Footer Links */}
+        <div className="flex flex-wrap justify-between w-full md:w-[50%] gap-5">
           {footer_data.map((section, index) => (
-            <div key={index}>
-              <h3 className="font-semibold text-base text-gray-900 md:mb-5 mb-2">
+            <div key={index} className="min-w-[120px]">
+              <h3 className="font-semibold text-base text-white mb-3">
                 {section.title}
               </h3>
-              <ul className="text-sm space-y-1">
+              <ul className="text-sm space-y-2">
                 {section.links.map((link, i) => (
                   <li key={i}>
-                    <a href="#" className="hover:underline transition">
+                    <a
+                      href="#"
+                      className="hover:text-primary transition-colors"
+                    >
                       {link}
                     </a>
                   </li>
@@ -35,10 +72,11 @@ const Footer = () => {
         </div>
       </div>
 
-      <p className="py-4 text-center text-sm md:text-base text-gray-500/80">
-        Copyright 2025{" "}
+      {/* Bottom Copyright */}
+      <p className="py-6 text-center text-sm sm:text-base text-gray-500">
+        © 2025 QuietPulse. All rights reserved.
       </p>
-    </div>
+    </footer>
   );
 };
 

@@ -34,7 +34,12 @@ const Login = () => {
             <h1 className="text-3xl font-bold">
               <span className="text-primary">Admin </span>Login
             </h1>
-            <p>Enter your credentials to access the admin panel</p>
+            <p className="text-black text-sm text-center mb-4">
+              Demo Credentials: <br />
+              Email: <span className="font-medium">admin@example.com</span>{" "}
+              <br />
+              Password: <span className="font-medium">anshuman123</span>
+            </p>
           </div>
           <form
             onSubmit={handleSubmit}

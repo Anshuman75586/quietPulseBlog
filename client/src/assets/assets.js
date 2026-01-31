@@ -273,8 +273,4 @@ export const footer_data = [
       "Contact Us",
     ],
   },
-  {
-    title: "Follow Us",
-    links: ["Instagram", "Twitter", "Facebook", "YouTube"],
-  },
 ];

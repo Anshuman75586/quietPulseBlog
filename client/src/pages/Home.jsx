@@ -4,15 +4,18 @@ import Header from "../components/Header";
 import Bloglist from "../components/Bloglist";
 import NewsLetter from "../components/NewsLetter";
 import Footer from "../components/Footer";
+import SmoothScroll from "../SmoothScroll";
 
 const Home = () => {
   return (
     <>
-      <Navbar />
-      <Header />
-      <Bloglist />
-      <NewsLetter />
-      <Footer />
+      <SmoothScroll>
+        <Navbar />
+        <Header />
+        <Bloglist />
+        <NewsLetter />
+        <Footer />
+      </SmoothScroll>
     </>
   );
 };
