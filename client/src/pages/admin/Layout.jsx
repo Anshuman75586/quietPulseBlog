@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { assets } from "../../assets/assets";
 import { Outlet, useNavigate } from "react-router-dom";
 import Sidebar from "../../components/admin/Sidebar";
 import { useAppContext } from "../../context/AppContext";
@@ -24,16 +23,19 @@ const Layout = () => {
   return (
     <>
       {/* Top Navbar */}
-      <div className="flex items-center justify-between py-2 h-[70px] px-4 sm:px-12 border-b border-gray-200">
-        <img
-          src={assets.logo}
-          alt="Logo"
-          className="w-32 sm:w-40 cursor-pointer"
+      <div className="flex justify-between items-center py-5 px-4 sm:px-20 xl:px-32 cursor-pointer bg-white shadow-md">
+        {/* Text Logo */}
+        <h1
           onClick={() => navigate("/")}
-        />
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary cursor-pointer transition-transform duration-300 hover:scale-105"
+        >
+          QuietPulse
+        </h1>
+
+        {/* Logout Button (styled like Navbar button) */}
         <button
           onClick={logout}
-          className="text-sm px-8 py-2 bg-primary text-white rounded-full cursor-pointer"
+          className="flex items-center justify-center rounded-full text-sm sm:text-base cursor-pointer bg-primary text-white px-8 sm:px-10 py-2.5 sm:py-3 transition-all duration-300 hover:shadow-lg"
         >
           Logout
         </button>
