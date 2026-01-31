@@ -14,10 +14,13 @@ const Layout = () => {
   }, [navigate]);
 
   const logout = () => {
+    // Clear token
     localStorage.removeItem("token");
     delete axios.defaults.headers["Authorization"];
     setToken(null);
-    navigate("/login");
+
+    // Redirect to home page
+    navigate("/");
   };
 
   return (
@@ -32,7 +35,7 @@ const Layout = () => {
           QuietPulse
         </h1>
 
-        {/* Logout Button (styled like Navbar button) */}
+        {/* Logout Button */}
         <button
           onClick={logout}
           className="flex items-center justify-center rounded-full text-sm sm:text-base cursor-pointer bg-primary text-white px-8 sm:px-10 py-2.5 sm:py-3 transition-all duration-300 hover:shadow-lg"
